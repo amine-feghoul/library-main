@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".search">
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="5dp"
+        android:imeOptions="actionSearch"
+        android:drawableLeft="@drawable/ic_search_grey"
+        android:drawablePadding="5dp"
+        android:background="@drawable/searche_shape"
+        android:ems="10"
+        android:textColor="@android:color/black"
+        android:hint="search by title of book"
+        android:inputType="textPersonName"
+        android:paddingTop="8dp"
+        android:paddingLeft="5dp"
+        android:paddingBottom="8dp"
+        android:textColorHint="#808080"
+        android:textSize="15sp" />
+    <ImageView
+        android:id="@+id/icon_search"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_search_grey"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search in read me"
+        android:textStyle="bold"
+        android:textColor="#808080"
+        android:textSize="23sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#808080"
+        android:textSize="20sp"
+        android:text="here you can search for your "
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="50dp"/>
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#808080"
+        android:textSize="20sp"
+        android:text="favorite books"
+       android:layout_gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchrv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
